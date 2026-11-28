@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f1efe8" />
+    <meta name="description" content="Claire Pan 的個人網站。圖論研究、資安分析、程式、社團教學，以及一些還沒研究完的問題。" />
+    <title>pwhc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+    <a class="skip" href="#main">跳至主要內容</a>
+    <div id="progress" aria-hidden="true"></div>
+    <header class="site-header wrap">
+        <a class="brand" href="#top" aria-label="Claire, back to top"><span
+                class="brand-symbol">c.</span><span>CLAIRE<span style="color:var(--blue)">/</span> PAN</span></a>
+        <nav class="nav" id="navigation" aria-label="主選單">
+            <a href="#work">01 / WORK</a><a href="#about">02 / ABOUT</a><a href="#lab">03 / PLAY</a><a
+                href="#contact">04 / CONTACT</a>
+        </nav>
+        <div class="header-end mono"><span class="status-dot"></span> TAIPEI · 2026</div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="開啟選單" aria-expanded="false">≡</button>
+    </header>
+    <main id="main">
+        <section class="hero wrap" id="top">
+            <div class="hero-left">
+                <div class="eyebrow">GRAPH THEORY / CYBERSECURITY / PROGRAMMING</div>
+                <h1 class="hero-title"><span>CLAIRE</span><span class="break">PAN.</span></h1>
+                <div class="hero-intro">
+                    <p>相較於得到答案本身，我更享受的</br>是理解「為什麼」的過程。</p>
+                    <span class="mono muted serial">PORTFOLIO / VOL. 01 — 2026</span>
+                </div>
+                <div class="hero-actions">
+                    <a class="solid-link" href="#work">EXPLORE MY WORK <span>↗</span></a>
+                    <a class="text-link" href="#lab">OPEN THE TERMINAL <span>↗</span></a>
+                </div>
+            </div>
+            <div class="graph-column" data-reveal>
+                <div class="graph-card">
+                    <div class="graph-head"><strong>如果拿掉幾個點，這張圖還能繞出一個圈嗎？</strong><span class="label-pill">TRY IT /
+                            01</span></div>
+                    <div class="graph-guide"><span class="mono">A / HAMILTONIAN CYCLE</span>
+                        <p>藍線走過每個點一次，最後回到起點。<br />試試「少 3 點」和「少 5 點」，或自己點圖上的數字移除頂點。</p>
+                    </div>
+                    <div class="graph-viewport">
+                        <div class="corner-tag">PIZZA GRAPH · PZ⁴₁₁<br /><b id="graph-instruction">CLICK ANY VERTEX TO
+                                REMOVE IT</b></div>
+                        <svg id="pizza-graph" viewBox="0 0 600 560" role="img"
+                            aria-label="十一個頂點的披薩圖，藍線為找到的漢密頓圈。點擊頂點可移除或復原，並立即重新搜尋漢密頓圈。">
+                            <g id="graph-edges"></g>
+                            <g id="graph-cycle"></g>
+                            <g id="graph-nodes"></g>
+                        </svg>
+                        <span class="rotate-label">PZ⁴₁₁ / STEP SET {1,2,3}</span>
+                    </div>
+                    <div class="graph-legend"><span><i class="swatch swatch-cycle"></i> 漢密頓圈</span><span><i
+                                class="swatch swatch-edge"></i> 原本的邊</span><span><i class="swatch swatch-removed"></i>
+                            已移除的點</span></div>
+                    <div class="graph-footer">
+                        <div class="graph-stat"><strong id="graph-status">尋找漢密頓圈中…</strong><small id="graph-count">11
+                                個頂點 · 移除 0 個</small><small id="graph-reading"
+                                class="graph-reading">圖論研究的起點：觀察少了哪些點之後，圈還存不存在。</small></div>
+                        <div class="graph-acts"><button id="graph-fault" type="button">少 3 點</button><button
+                                id="graph-fault-five" type="button">少 5 點</button><button id="graph-reset"
+                                type="button">↺ 重設</button></div>
+                    </div>
+                </div>
+                <p class="graph-caption">不同移除方法，可能有不同結果。找出特例很快，證明所有情形才是研究的重點。</p>
+            </div>
+        </section>
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker-track" id="ticker-track">
+                <span class="ticker-item">ONE MORE CASE <em>✳</em></span><span class="ticker-item">TRY A DIFFERENT
+                    APPROACH <em>↗</em></span><span class="ticker-item">BACK TO THE PROOF <em>✳</em></span><span
+                    class="ticker-item">FIND REFERENCES <em>↗</em></span>
+                <span class="ticker-item">ONE MORE CASE <em>✳</em></span><span class="ticker-item">TRY A DIFFERENT
+                    APPROACH <em>↗</em></span><span class="ticker-item">BACK TO THE PROOF <em>✳</em></span><span
+                    class="ticker-item">READ THE SOURCE <em>↗</em></span>
+            </div>
+        </div>
+        <section class="section wrap" id="work">
+            <div class="section-label"><span>01 / SELECTED WORK</span><span>PROJECTS, CLASSES, AND THINGS I ACTUALLY
+                    DID.</span></div>
+            <h2 class="section-title" data-reveal>A FEW THINGS<br />I'VE WORKED ON<span
+                    style="color:var(--blue)">.</span></h2>
+            <div class="filters" aria-label="作品分類">
+                <button class="filter active" data-filter="all" aria-pressed="true">ALL / 04</button><button
+                    class="filter" data-filter="math" aria-pressed="false">MATHEMATICS</button><button class="filter"
+                    data-filter="security" aria-pressed="false">SECURITY</button><button class="filter"
+                    data-filter="community" aria-pressed="false">COMMUNITY</button>
+            </div>
+            <div class="work-grid" id="work-grid">
+                <article class="work-item wide" data-category="math" data-reveal><button class="work-button"
+                        type="button" data-project="pizza" aria-label="查看披薩圖研究詳細內容">
+                        <div class="work-index mono"><span>NO. 01 / RESEARCH</span><span>2024—2026</span></div>
+                        <div class="work-visual">
+                            <div class="work-art visual-pizza">
+                                <div class="viz-label">A STUDY ON THE HAMILTONICITY<br />OF MULTILAYER PIZZA GRAPHS
+                                </div>
+                                <svg viewBox="0 0 500 500" aria-hidden="true">
+                                    <g id="decor-graph"></g>
+                                </svg>
+                                <div class="math-type">PZ<sup>m</sup><sub>n</sub></div>
+                            </div>
+                        </div>
+                        <div class="work-meta">
+                            <h3 class="work-title">多層披薩圖的漢密頓性研究</h3><span class="work-arrow">↗</span>
+                        </div>
+                        <p class="work-desc">我們自己建構了「披薩圖」。我主要負責偶數級及多層偶數級的證明，從大量案例找出能涵蓋所有情形的結構。</p>
+                        <div class="tags"><span>GRAPH THEORY</span><span>HAMILTONICITY</span><span>LEADERSHIP</span>
+                        </div>
+                    </button></article>
+                <article class="work-item" data-category="security" data-reveal><button class="work-button"
+                        type="button" data-project="hyread" aria-label="查看桌面端安全研究詳細內容">
+                        <div class="work-index mono"><span>NO. 02 / AIS3</span><span>2025</span></div>
+                        <div class="work-visual">
+                            <div class="work-art visual-security">
+                                <div class="terminal-ui">
+                                    <div class="mono">$ inspect --hyread-desktop</div>
+                                    <div class="term-big">DRM<br />UNDER<br />THE HOOD.</div>
+                                    <div><span class="hollow">STORAGE</span> &nbsp;→&nbsp; <span
+                                            class="hollow">VERIFY</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-meta">
+                            <h3 class="work-title">電子書桌面端安全分析</h3><span class="work-arrow">↗</span>
+                        </div>
+                        <p class="work-desc">AIS3 專題從 HyRead 桌機版著手，追蹤檔案儲存與身分驗證方式，研究真實電子書系統的安全問題。</p>
+                        <div class="tags"><span>SECURITY RESEARCH</span><span>AIS3</span></div>
+                    </button></article>
+                <article class="work-item" data-category="security" data-reveal><button class="work-button"
+                        type="button" data-project="ctf" aria-label="查看資安競賽詳細內容">
+                        <div class="work-index mono"><span>NO. 03 / CTF & TEAMWORK</span><span>2025—2026</span></div>
+                        <div class="work-visual">
+                            <div class="work-art visual-ctf">
+                                <div class="ctf-ring"></div>
+                                <div class="ctf-ring"></div><span class="ctf-letter">TECHGiCS / HIGH SCHOOL DIVISION /
+                                    2026</span><span class="ctf-num">1ST.</span><span
+                                    class="ctf-corner">TECHGiCS<br />SECURITY CHALLENGE</span>
+                            </div>
+                        </div>
+                        <div class="work-meta">
+                            <h3 class="work-title">GiCS、MyFirstCTF 與資安競賽</h3><span class="work-arrow">↗</span>
+                        </div>
+                        <p class="work-desc">高一、高二連續參加兩屆 GiCS。第二年擔任隊長拿下第一名，也在 MyFirstCTF 接觸到很多原本不熟悉的題型。</p>
+                        <div class="tags"><span>TECHGiCS</span><span>CTF</span><span>LEADERSHIP</span></div>
+                    </button></article>
+                <article class="work-item wide" data-category="community" data-reveal><button class="work-button"
+                        type="button" data-project="club" aria-label="查看社團教學與維運詳細內容">
+                        <div class="work-index mono"><span>NO. 04 / BUILDING WITH PEOPLE</span><span>2025—2026</span>
+                        </div>
+                        <div class="work-visual">
+                            <div class="work-art visual-community">
+                                <div class="community-top"><span>FGISC / 39TH</span><span>TEACHING + SYSADMIN</span>
+                                </div>
+                                <div class="community-message">會寫，<br /><span>不代表</span><br />會教。</div>
+                                <div class="community-bottom"><span>// TEACHING</span><span>//
+                                        INFRASTRUCTURE</span><span>// COMMUNITY</span></div>
+                            </div>
+                        </div>
+                        <div class="work-meta">
+                            <h3 class="work-title">社課、網管與一週的跨校暑訓</h3><span class="work-arrow">↗</span>
+                        </div>
+                        <p class="work-desc">從參加暑訓的學員，到隔年負責整週活動。平常則在社團教資安與 C++，也處理伺服器和線上評測系統。</p>
+                        <div class="tags"><span>TEACHING</span><span>SYSTEMS</span><span>COMMUNITY</span></div>
+                    </button></article>
+            </div>
+        </section>
+        <section class="section about" id="about">
+            <div class="wrap">
+                <div class="section-label"><span>02 / ABOUT ME</span><span>A LITTLE MORE CONTEXT.</span></div>
+                <div class="about-content">
+                    <h2 class="about-title" data-reveal>STILL<br />FIGURING<br /><i>THINGS</i><br />OUT.</h2>
+                    <div class="about-text" data-reveal>
+                        <p>從小學開始，數學一直是我最熟悉，也最願意花時間探索的領域。上高中以後接觸程式與資安，又多了好多想研究的問題。</p>
+                        <p>做圖論專題時，我們曾經因為直接從圖形找證明而卡住，後來改從循環圖與同構轉換下手。這讓我越來越習慣：卡住不一定代表走錯方向，有時只是需要換個角度。</p>
+                        <p>在社團當講師後，也發現自己「會用」的東西不一定能解釋清楚。要教別人之前，往往得先重新想一遍。</p>
+                    </div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-cell" data-reveal><span class="number">01 / RESEARCH</span>
+                        <h3>圖論</h3>
+                        <p>臺北市科展數學科特優<br />全國科展代表<br />中學生專題研究獎助一等獎</p>
+                    </div>
+                    <div class="about-cell" data-reveal><span class="number">02 / SECURITY</span>
+                        <h3>資安</h3>
+                        <p>TechGiCS 高中職組第一名<br />AIS3 MyFirstCTF 銅質獎<br />AIS3 新型態最佳專題</p>
+                    </div>
+                    <div class="about-cell" data-reveal><span class="number">03 / PROGRAMMING</span>
+                        <h3>程式</h3>
+                        <p>C++ / Python / Web<br />APCS 觀念 4、實作 3<br />Codeforces / CSES / ZeroJudge</p>
+                    </div>
+                    <div class="about-cell" data-reveal><span class="number">04 / COMMUNITY</span>
+                        <h3>社團</h3>
+                        <p>資訊研習社第 39 屆社長<br />學術網管與講師<br />跨校電資暑訓籌辦</p>
+                    </div>
+                </div>
+                <div class="credentials mono"><span>OTHER SIGNALS →</span><span><strong>TOEIC</strong>
+                        990</span><span><strong>CAMBRIDGE</strong> C1 ADVANCED</span><span><strong>iPAS</strong>
+                        INTERMEDIATE CYBERSECURITY</span></div>
+            </div>
+        </section>
+        <section class="section wrap" id="lab">
+            <div class="section-label"><span>03 / TERMINAL</span><span>ANOTHER WAY TO BROWSE THE SITE.</span></div>
+            <div class="lab-top">
+                <h2 class="section-title" data-reveal>OPEN A<br />TERMINAL.</h2>
+                <p class="lab-lead">不想一直滑網頁的話，可以從這裡逛。試試 <code>ls</code>、<code>cd projects</code>、<code>cat
+                        pizza.txt</code>，也可以輸入 <code>bio</code> 打開名片。真的有目錄跟檔案。</p>
+            </div>
+            <div class="console" data-reveal>
+                <div class="console-top"><span>claire@portfolio:~</span>
+                    <div class="console-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                    <span>TERMINAL / v1.0</span>
+                </div>
+                <div class="console-inner">
+                    <div class="console-sidebar"><small>START HERE / CLICK OR TYPE ↘</small><button class="cmd"
+                            data-command="help">help <span>↗</span></button><button class="cmd" data-command="ls">ls
+                            <span>↗</span></button><button class="cmd" data-command="cd projects">cd projects
+                            <span>↗</span></button><button class="cmd" data-command="cat pizza.txt">cat pizza.txt
+                            <span>↗</span></button><button class="cmd" data-command="bio">bio <span>↗</span></button>
+                        <div class="console-side-note mono">↑ ↓ history<br />TAB autocomplete<br />/ focus input</div>
+                    </div>
+                    <div class="console-main">
+                        <div id="console-output" role="log" aria-live="polite">
+                            <p class="console-line"><span class="console-prompt">claire@site:~$ </span>cat README.md</p>
+                            <p class="console-line console-answer">這是一個很小的網站檔案系統。<br />先輸入 <strong>ls</strong>
+                                看看有哪些資料夾，或輸入 <strong>open hackmd</strong> 開啟筆記。</p>
+                        </div>
+                        <form class="console-input" id="console-form" autocomplete="off"><span
+                                id="terminal-prompt">claire@site:~$</span><input id="console-command"
+                                aria-label="輸入終端機指令" placeholder="ls / cd / cat / bio" spellcheck="false"
+                                autocapitalize="off" /><button type="submit">RUN ↵</button></form>
+                    </div>
+                </div>
+            </div>
+            <p class="mono muted" style="margin-top:27px;text-align:right">TIP: PRESS / ANYWHERE TO FOCUS THE TERMINAL.
+            </p>
+        </section>
+        <section class="closing wrap" id="contact">
+            <div class="section-label"><span>04 / CONTACT</span><span>THAT'S ALL FOR NOW.</span></div>
+            <div class="closing-grid">
+                <h2>THAT'S<br /><span>ME.</span><br />FOR NOW.</h2>
+                <div class="closing-aside">
+                    <p>這個網站整理了我這幾年做過的研究、比賽和一些社團工作。之後如果又做了什麼有趣的東西，會再放上來。</p>
+                    <div class="closing-buttons"><button id="copy-bio" type="button">VIEW MY CARD ↗</button><a
+                            href="https://hackmd.io/@pwhc" target="_blank" rel="noopener noreferrer">HACKMD ↗</a><a
+                            id="contact-link" hidden href="#contact">SEND AN EMAIL ↗</a></div>
+                    <p class="mono muted" id="contact-note" style="margin-top:18px;font-size:10px">CONTACT LINK /
+                        CONFIGURABLE BEFORE PUBLISHING</p>
+                </div>
+            </div>
+            <footer class="footer"><span>© <span id="copyright-year">2026</span> CLAIRE PAN</span><span>BUILT, THEN
+                    REVISED. OCT 2026.</span><a href="#top">BACK TO TOP ↑</a></footer>
+        </section>
+    </main>
+    <dialog class="case-dialog" id="case-dialog" aria-labelledby="dialog-title">
+        <div class="dialog-top"><span class="mono">CLAIRE / CASE FILES</span><button class="dialog-close"
+                id="dialog-close" aria-label="關閉視窗">×</button></div>
+        <div class="dialog-content"><span class="dialog-number" id="dialog-number"></span>
+            <h2 class="dialog-title" id="dialog-title"></h2>
+            <div class="dialog-story">
+                <p class="dialog-lead" id="dialog-lead"></p>
+                <p id="dialog-role"></p>
+            </div>
+            <div class="dialog-results">
+                <h4>SELECTED RESULTS</h4>
+                <ul id="dialog-highlights"></ul>
+            </div>
+        </div>
+        <div class="dialog-nav"><button id="dialog-prev" type="button">← PREVIOUS CASE</button><button id="dialog-next"
+                type="button">NEXT CASE →</button></div>
+    </dialog>
+    <dialog class="bio-dialog" id="bio-dialog" aria-labelledby="bio-dialog-title">
+        <div class="dialog-top"><span class="mono">CLAIRE / CONTACT CARD</span><button class="dialog-close"
+                id="bio-dialog-close" type="button" aria-label="關閉名片">×</button></div>
+        <div class="bio-paper">
+            <div class="bio-card-head"><span class="mono">NO. 001 / INTRODUCTION</span><span class="mono">2026 ·
+                    TAIPEI</span></div>
+            <div class="bio-card-main">
+                <div><span class="bio-monogram">c.</span></div>
+                <div>
+                    <h2 id="bio-dialog-title">Claire<br />Pan<span class="blue-dot">.</span></h2>
+                    <p class="bio-zh">潘維希</p>
+                    <p class="bio-line">Graph theory / Cybersecurity / Programming</p>
+                </div>
+            </div>
+            <div class="bio-card-bottom">
+                <div><span class="mono">CURRENTLY</span>
+                    <p>北一女中數理資優班<br />圖論研究、資安分析與社團教學</p>
+                </div>
+                <div><span class="mono">PREVIOUSLY / STILL</span>
+                    <p>TechGiCS · AIS3 · 科展<br />資訊研習社 39th</p>
+                </div>
+            </div>
+        </div>
+        <div class="bio-dialog-actions">
+            <p>先看名片，再決定要不要複製。只複製文字，不會複製奇怪的格式。</p><button id="copy-bio-text" type="button">COPY CARD TEXT ↗</button>
+        </div>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/graph.js" defer></script>
+    <script src="assets/js/data/projects-data.js" defer></script>
+    <script src="assets/js/projects.js" defer></script>
+    <script src="assets/js/data/terminal-data.js" defer></script>
+    <script src="assets/js/terminal.js" defer></script>
+</body>
+
+</html>
